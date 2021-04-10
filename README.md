@@ -1,4 +1,4 @@
-# ArchitectureBros
+# Verilog Clock
 ### Members:
 - Stanlly (Leader)
 - Justin
