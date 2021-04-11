@@ -67,8 +67,8 @@ module clock (
             end
 
         end
-          
-          else if (io3_setMinute && sec_count == 99999999) begin
+		  
+		  else if (io3_setMinute && sec_count == 99999999) begin
 
             if (io0_down) begin
                 if (minute <= 0) minute <= 0;
@@ -193,99 +193,99 @@ module clock (
             end
         end
     end
-     
-     
-     /*******Multiplexing Four Digits*******/
-     
-     reg [17:0] count; // 18-bit counter
-     
-     always @(posedge clk) begin
-        count <= count + 1;
-     end
-     
-     always @* begin
-        /*******Normal Display*******/
-        if (!io5_stopwatch_enable) begin
-            case (count[17:16])
-                2'b00: begin
-                    out_digit <= hour1;
-                    led_enabled <= 4'b1000;
-                    dp = 1'b1;
-                end
-                2'b01: begin
-                    out_digit <= hour2;
-                    led_enabled <= 4'b1000;
-                    dp = 1'b0;
-                end
-                2'b10: begin
-                    if (sec_count < 50000000) begin // Blinking effect every half a second (because the clock is 100MHz)
-                        out_digit <= minute1;
-                        led_enabled <= 4'b0010;
-                    end
-                    else begin
-                        led_enabled <= 4'b0000;
-                    end
-                    dp = 1'b1;
-                end
-                2'b11: begin
-                    if (sec_count < 50000000) begin
-                        out_digit <= minute2;
-                        led_enabled <= 4'b0001;
-                    end
-                    else begin
-                        led_enabled <= 4'b0000;
-                    end
-                    if (am_pm) dp <= 1'b0; // last decimal point is ON if it is PM
-                    else dp <= 1'b1;
-                end
-            endcase
-        end
-        /*******Stopwatch Display*******/
-        else begin
-            case (count[17:16])
-                2'b00: begin
-                    out_digit <= sw_minute1;
-                    led_enabled <= 4'b1000;
-                    dp = 1'b1;
-                end
-                2'b01: begin
-                    out_digit <= sw_minute2;
-                    led_enabled <= 4'b0100;
-                    dp = 1'b0;
-                end
-                2'b10: begin
-                    out_digit <= sw_second1;
-                    led_enabled <= 4'b0010;
-                    dp = 1'b1;
-                end
-                2'b11: begin
-                    out_digit <= sw_second2;
-                    led_enabled <= 4'b0001;
-                    dp = 1'b1;
-                end
-            endcase
-        end
-     end
-     
-     /*******7-Segment Display*******/
-     always @* begin
-        case(out_digit)
-            4'b0000: segments = 7'b0000001;
-            4'b0001: segments = 7'b1001111;
-            4'b0010: segments = 7'b0010010;
-            4'b0011: segments = 7'b0000110;
-            4'b0100: segments = 7'b1001100;
-            4'b0101: segments = 7'b0100100;
-            4'b0110: segments = 7'b0100000;
-            4'b0111: segments = 7'b0001111;
-            4'b1000: segments = 7'b0000000;
-            4'b1001: segments = 7'b0000100;
-            4'b1010: segments = 7'b0001000;
-            4'b1011: segments = 7'b1100000;
-            4'b1100: segments = 7'b0110001;
-            4'b1101: segments = 7'b1000010;
-            4'b1110: segments = 7'b0110000;
-            4'b1111: segments = 7'b0111000;
-        endcase
-    end
+	 
+	 
+	 /*******Multiplexing Four Digits*******/
+	 
+	 reg [17:0] count; // 18-bit counter
+	 
+	 always @(posedge clk) begin
+		count <= count + 1;
+	 end
+	 
+	 always @* begin
+		/*******Normal Display*******/
+		if (!io5_stopwatch_enable) begin
+			case (count[17:16])
+				2'b00: begin
+					out_digit <= hour1;
+					led_enabled <= 4'b1000;
+					dp = 1'b1;
+				end
+				2'b01: begin
+					out_digit <= hour2;
+					led_enabled <= 4'b1000;
+					dp = 1'b0;
+				end
+				2'b10: begin
+					if (sec_count < 50000000) begin // Blinking effect every half a second (because the clock is 100MHz)
+						out_digit <= minute1;
+						led_enabled <= 4'b0010;
+					end
+					else begin
+						led_enabled <= 4'b0000;
+					end
+					dp = 1'b1;
+				end
+				2'b11: begin
+					if (sec_count < 50000000) begin
+						out_digit <= minute2;
+						led_enabled <= 4'b0001;
+					end
+					else begin
+						led_enabled <= 4'b0000;
+					end
+					if (am_pm) dp <= 1'b0; // last decimal point is ON if it is PM
+					else dp <= 1'b1;
+				end
+			endcase
+		end
+		/*******Stopwatch Display*******/
+		else begin
+			case (count[17:16])
+				2'b00: begin
+					out_digit <= sw_minute1;
+					led_enabled <= 4'b1000;
+					dp = 1'b1;
+				end
+				2'b01: begin
+					out_digit <= sw_minute2;
+					led_enabled <= 4'b0100;
+					dp = 1'b0;
+				end
+				2'b10: begin
+					out_digit <= sw_second1;
+					led_enabled <= 4'b0010;
+					dp = 1'b1;
+				end
+				2'b11: begin
+					out_digit <= sw_second2;
+					led_enabled <= 4'b0001;
+					dp = 1'b1;
+				end
+			endcase
+		end
+	 end
+	 
+	 /*******7-Segment Display*******/
+	 always @* begin
+		case(out_digit)
+			4'b0000: segments = 7'b0000001;
+			4'b0001: segments = 7'b1001111;
+			4'b0010: segments = 7'b0010010;
+			4'b0011: segments = 7'b0000110;
+			4'b0100: segments = 7'b1001100;
+			4'b0101: segments = 7'b0100100;
+			4'b0110: segments = 7'b0100000;
+			4'b0111: segments = 7'b0001111;
+			4'b1000: segments = 7'b0000000;
+			4'b1001: segments = 7'b0000100;
+			4'b1010: segments = 7'b0001000;
+			4'b1011: segments = 7'b1100000;
+			4'b1100: segments = 7'b0110001;
+			4'b1101: segments = 7'b1000010;
+			4'b1110: segments = 7'b0110000;
+			4'b1111: segments = 7'b0111000;
+		endcase
+	end
 endmodule //clock
