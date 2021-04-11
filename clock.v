@@ -66,9 +66,8 @@ module clock (
                 hour <= hour + 1;
             end
 
-        end
-		  
-		  else if (io3_setMinute && sec_count == 99999999) begin
+        end		  
+		else if (io3_setMinute && sec_count == 99999999) begin
 
             if (io0_down) begin
                 if (minute <= 0) minute <= 0;
