@@ -1,0 +1,29 @@
+{D:/Computer Science/Python Assignments/Apriori/verilog clock/clock.v} {1 {vlog -work work -stats=none {D:/Computer Science/Python Assignments/Apriori/verilog clock/clock.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module clock
+
+Top level modules:
+	clock
+
+} {} {}} {D:/Computer Science/Python Assignments/Apriori/clocks.v} {1 {vlog -work work -stats=none {D:/Computer Science/Python Assignments/Apriori/clocks.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Digital_Clock
+
+Top level modules:
+	Digital_Clock
+
+} {} {}} {D:/Computer Science/Python Assignments/Apriori/verilog clock/clock_tb.v} {1 {vlog -work work -stats=none {D:/Computer Science/Python Assignments/Apriori/verilog clock/clock_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module clock_tb
+
+Top level modules:
+	clock_tb
+
+} {} {}} {D:/Computer Science/Python Assignments/Apriori/testbench.v} {1 {vlog -work work -stats=none {D:/Computer Science/Python Assignments/Apriori/testbench.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_clock
+
+Top level modules:
+	tb_clock
+
+} {} {}}

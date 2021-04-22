@@ -1,0 +1,24 @@
+# Current time Thu Apr 22 17:06:58 2021
+# ModelSim - Intel FPGA Edition Stack Trace
+# Program = vish
+# Id = "2020.1"
+# Version = "2020.02"
+# Date = "Feb 28 2020"
+# Platform = win32pe
+
+Exception c0000005 has occurred at address 00647014. Traceback:
+# 0    0x00647014: 'WinMain + 0xedc84'
+# 1    0x00643261: 'WinMain + 0xe9ed1'
+# 2    0x005954de: 'WinMain + 0x3c14e'
+# 3    0x007117e2: 'WlfContextItem::`vector deleting destructor' + 0x16542'
+# 4    0x0059320b: 'WinMain + 0x39e7b'
+# 5    0x0059330b: 'WinMain + 0x39f7b'
+# 6    0x004f2250: 'mti_strlen + 0x43bf0'
+# 7    0x756b9d91: 'TclCallVarTraces + 0x2e1'
+# 8    0x756c4d3f: 'Tcl_FindNamespaceVar + 0x18f'
+# 9    0x756636ad: 'Tcl_CreateHashEntry + 0xad'
+# 10   0x756c0270: 'TclObjLookupVar + 0x990'
+# 11   0x756bfd38: 'TclObjLookupVar + 0x458'
+StackWalk failed 299
+# End of Stack Trace
+

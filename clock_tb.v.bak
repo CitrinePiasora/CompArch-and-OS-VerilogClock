@@ -1,0 +1,24 @@
+`timescale 1ns/1ps
+module clock_tb;
+	//Inputs
+	reg clk, reset_n;
+	clock uut (
+		.clk (clk),
+		.out_digits (out_digits)
+	);
+
+	initial begin
+		clk = 0;
+
+		#10; clk = 0;
+		#10; clk = 1;
+		#10; clk = 2;
+		#10; clk = 3;
+		#10; clk = 4;
+		#10; clk = 5;
+		#10; clk = 6;
+		#10; clk = 7;
+		#10; clk = 8;
+		#10; clk = 9;
+	end
+endmodule

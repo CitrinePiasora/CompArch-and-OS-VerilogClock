@@ -1,0 +1,104 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/QuartusProjects/TrafficLight
+vclock
+Z0 !s110 1619101055
+!i10b 1
+!s100 Wo4@H4X_LC>oF]=UnlF[J0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IS0?FgJ=Z?3DD<^ZB8AOad0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dD:/Computer Science/Python Assignments/Apriori/verilog clock
+w1619101046
+8D:/Computer Science/Python Assignments/Apriori/verilog clock/clock.v
+FD:/Computer Science/Python Assignments/Apriori/verilog clock/clock.v
+!i122 167
+L0 3 57
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1619101055.000000
+!s107 D:/Computer Science/Python Assignments/Apriori/verilog clock/clock.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Computer Science/Python Assignments/Apriori/verilog clock/clock.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vclock_tb
+R0
+!i10b 1
+!s100 z523ZBg24P1UTXdX<a2X13
+R1
+IE`AXIJ?@EU1CE>R@ME8RP0
+R2
+R3
+w1619099458
+8D:/Computer Science/Python Assignments/Apriori/verilog clock/clock_tb.v
+FD:/Computer Science/Python Assignments/Apriori/verilog clock/clock_tb.v
+!i122 166
+L0 2 32
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Computer Science/Python Assignments/Apriori/verilog clock/clock_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Computer Science/Python Assignments/Apriori/verilog clock/clock_tb.v|
+!i113 1
+R6
+R7
+vDigital_Clock
+R0
+!i10b 1
+!s100 >::jmbjKVl3TVWgYYLZ<92
+R1
+I[EOWk41RikPjz`IkHboAG3
+R2
+R3
+w1619061681
+8D:/Computer Science/Python Assignments/Apriori/clocks.v
+FD:/Computer Science/Python Assignments/Apriori/clocks.v
+!i122 168
+L0 1 45
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Computer Science/Python Assignments/Apriori/clocks.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Computer Science/Python Assignments/Apriori/clocks.v|
+!i113 1
+R6
+R7
+n@digital_@clock
+vtb_clock
+R0
+!i10b 1
+!s100 31:z:^62TM?=A4LlKkUaL1
+R1
+I]lfcVcHeeYPLZBH5>3:cd2
+R2
+R3
+w1619065263
+8D:/Computer Science/Python Assignments/Apriori/testbench.v
+FD:/Computer Science/Python Assignments/Apriori/testbench.v
+!i122 169
+L0 1 32
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Computer Science/Python Assignments/Apriori/testbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Computer Science/Python Assignments/Apriori/testbench.v|
+!i113 1
+R6
+R7
