@@ -28,7 +28,7 @@ module clock (
         else if(clk == 1'b1) begin
             sec_count <= sec_count + 1;
 
-            if (sec_count >= 99999999) begin // 1-Sec Counter, 100M due to using 10 MHz Clock
+            if (sec_count >= 99999999) begin // 1-Sec Counter, 100M due to using 100 MHz Clock
                 second <= second + 1;
                 sec_count <= 0;
             end
@@ -47,13 +47,5 @@ module clock (
                 hour <= 0;
             end
         end
-    end
-
-    /*******Multiplexing Four Digits*******/
-    
-    reg [17:0] count; // 18-bit counter
-    
-    always @(posedge clk) begin
-    count <= count + 1;
     end
 endmodule //clock
