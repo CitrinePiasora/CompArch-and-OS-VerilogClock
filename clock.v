@@ -13,7 +13,7 @@ module clock (
 
     output reg [5:0] second, minute;
     output reg [4:0] hour;
-    output reg [27:0] sec_count; // 28-bit counter, 50MHz needs 26-bit Binary. Doing 27 just in case
+    output reg [27:0] sec_count; // 27-bit counter, 100MHz needs 26-bit Binary. Doing 27 just in case
 
     always @(posedge(clk) or posedge(reset_n)) begin
 
